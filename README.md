@@ -19,5 +19,5 @@
 3. Run Eureka Server  
 4. Run API Gateway  
 5. Run Student Service  
-6. Test in Postman: `http://localhost:8085/api/students/1`  
+6. Test in Postman: `http://localhost:8085/students/1`  
 
