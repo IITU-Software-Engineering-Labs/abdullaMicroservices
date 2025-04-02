@@ -10,7 +10,7 @@ import java.util.Arrays;
 import java.util.List;
 
 @RestController
-@RequestMapping("/api")
+@RequestMapping("/students")
 public class StudentController {
 
     private static List<Student> students = Arrays.asList(
@@ -18,7 +18,7 @@ public class StudentController {
             new Student(2, "Bob", "Mechanical Engineering", "Tea")
     );
 
-    @GetMapping("/students/{id}")
+    @GetMapping("/{id}")
     public Student getStudentById(@PathVariable int id) {
         return students.stream()
                 .filter(student -> student.getId() == id)
@@ -26,7 +26,7 @@ public class StudentController {
                 .orElse(null);
     }
 
-    @GetMapping("/students/by-hobby/{hobby}")
+    @GetMapping("/by-hobby/{hobby}")
     public String getStudentByHobby(@PathVariable String hobby) {
         return "Students who love " + hobby + " are cool!";
     }

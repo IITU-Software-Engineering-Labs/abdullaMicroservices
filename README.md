@@ -1,21 +1,23 @@
-# Student Service API
+# Spring Boot Microservices Project
+**Student:** Abdulla Abu Muamar 
+**Branch:** main branch in abdullaMicroservices repo  
 
-A simple Spring Boot application that provides endpoints to manage and retrieve information about students.
 
-## Features
-- Retrieve student by ID
-- Retrieve students by hobby
+## What I Built  
+- **Eureka Server**: Service discovery for dynamic scaling  
+- **API Gateway**: Routes requests to microservices  
+- **Student-Service**: REST API managing students  
+- **Unique Feature**: Added "favorite drink" field  
 
-## Endpoints
+## Why These Technologies?  
+- **Eureka** tracks services dynamically  
+- **API Gateway** simplifies routing and security  
 
-### 1. Get Student by ID
+## How to Run  
+1. Clone the repo  
+2. Checkout your branch  
+3. Run Eureka Server  
+4. Run API Gateway  
+5. Run Student Service  
+6. Test in Postman: `http://localhost:8085/api/students/1`  
 
-**URL**: `/api/students/{id}`  
-**Method**: `GET`
-
-**Path Parameters**: 
-- `id` (required): The ID of the student.
-
-**Response**:
-- Returns a `Student` object if found.
-- Returns `404 Not Found` if the student with the given ID does not exist.
